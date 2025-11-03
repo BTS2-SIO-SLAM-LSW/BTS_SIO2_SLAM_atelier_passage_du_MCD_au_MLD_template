@@ -1,11 +1,14 @@
 {
-  "name": "BTS SIO2 SLAM - Atelier de passage du MCD au MLD , en utilisant l'outil Looping",
+  "name": "BTS_SIO2_SLAM_atelier_passage_du_MCD_au_MLD_template",
   "build": {
     "dockerfile": "Dockerfile",
     "context": "."
   },
+
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
   "forwardPorts": [6080],
+
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,6 +20,11 @@
       ]
     }
   },
-  "postCreateCommand": "echo '✅ Environnement prêt ! Ouvre le port 6080 dans le navigateur pour accéder à Looping (Merise).'", 
+
+  "postCreateCommand": "echo '✅ Environnement prêt. Le bureau graphique va démarrer automatiquement au prochain start.'",
+
+  // ⬇⬇⬇ A chaque fois que le Codespace démarre, on lance le script du bureau LXDE/noVNC dans le conteneur. ⬇⬇⬇
+  "postStartCommand": "/startup.sh &",
+
   "remoteUser": "root"
 }
