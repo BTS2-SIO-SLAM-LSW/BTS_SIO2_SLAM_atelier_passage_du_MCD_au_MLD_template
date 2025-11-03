@@ -7,7 +7,7 @@
 
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-  "forwardPorts": [6080],
+  "forwardPorts": [80],
 
   "customizations": {
     "vscode": {
@@ -21,10 +21,9 @@
     }
   },
 
-  "postCreateCommand": "echo '✅ Environnement prêt. Le bureau graphique va démarrer automatiquement au prochain start.'",
+  "postCreateCommand": "echo '✅ Environnement prêt. Le bureau graphique va démarrer automatiquement.'",
 
-  // ⬇⬇⬇ A chaque fois que le Codespace démarre, on lance le script du bureau LXDE/noVNC dans le conteneur. ⬇⬇⬇
-  "postStartCommand": "/startup.sh &",
+  "postStartCommand": "nohup /startup.sh > /tmp/startup.log 2>&1 &",
 
   "remoteUser": "root"
 }

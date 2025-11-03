@@ -52,7 +52,7 @@ Terminal=false\n" > /root/Desktop/Looping.desktop && \
     chmod +x /root/Desktop/Looping.desktop
 
 # 6️⃣ Exposer noVNC (bureau graphique via navigateur du Codespace)
-EXPOSE 6080
+EXPOSE 80 5900
 
 # On ne touche pas à l'ENTRYPOINT/CMD :
 # l'image de base lance supervisord, le serveur VNC et noVNC.
