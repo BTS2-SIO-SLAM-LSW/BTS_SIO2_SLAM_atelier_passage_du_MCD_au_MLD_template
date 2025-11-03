@@ -21,9 +21,9 @@
     }
   },
 
-  "postCreateCommand": "echo '✅ Environnement prêt. Le bureau graphique va démarrer automatiquement.'",
+  "postCreateCommand": "echo '✅ Environnement prêt. Le bureau graphique va démarrer.'",
 
-  "postStartCommand": "nohup /startup.sh > /tmp/startup.log 2>&1 &",
+  "postAttachCommand": "nohup /startup.sh > /tmp/startup.log 2>&1 &",
 
   "remoteUser": "root"
 }
