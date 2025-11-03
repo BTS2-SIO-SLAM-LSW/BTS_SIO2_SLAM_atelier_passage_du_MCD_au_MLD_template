@@ -1,0 +1,22 @@
+{
+  "name": "BTS SIO2 SLAM - Atelier de passage du MCD au MLD , en utilisant l'outil Looping",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [6080],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jebbs.plantuml",
+        "kaishuu0123.vscode-erdiagram",
+        "ms-azuretools.vscode-docker",
+        "mtxr.sqltools",
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "echo '✅ Environnement prêt ! Ouvre le port 6080 dans le navigateur pour accéder à Looping (Merise).'", 
+  "remoteUser": "root"
+}
