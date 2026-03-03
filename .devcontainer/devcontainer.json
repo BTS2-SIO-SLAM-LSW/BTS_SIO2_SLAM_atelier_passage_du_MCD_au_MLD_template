@@ -1,5 +1,5 @@
 {
-  "name": "BTS_SIO2_SLAM_atelier_passage_du_MCD_au_MLD_template",
+  "name": "BTS_SIO1_SLAM_atelier_passage_du_MCD_au_MLD_template",
   "build": {
     "dockerfile": "Dockerfile",
     "context": "."
